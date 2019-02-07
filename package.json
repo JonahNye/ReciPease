@@ -1,0 +1,23 @@
+{
+  "name": "recipease",
+  "version": "1.0.0",
+  "description": "A recipe API search app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonahNye/ReciPease.git"
+  },
+  "author": "Jonah Nye, Betsy Sukkoup, and Lauren Wallace",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonahNye/ReciPease/issues"
+  },
+  "homepage": "https://github.com/JonahNye/ReciPease#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
