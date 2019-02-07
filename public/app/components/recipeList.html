@@ -1,0 +1,32 @@
+<i class="material-icons favorites-page-btn" ng-click="$ctrl.goFavorites();">favorite</i>
+<i class="fas fa-search" ng-click="$ctrl.goToSearch()"></i>
+
+<h2>Recipes</h2>
+
+<section class="main-container" ng-repeat="list in $ctrl.listOfItems track by $index">
+    <section class="recipe">
+        <section class="results-header">
+            <p id="recipe-title">{{list.recipe.label}}</p>
+            <section class="results-icons">
+                <i directive class="fas fa-plus"></i>
+                <i close-directive class="fas fa-minus"></i>
+                <i class="fas fa-heart" ng-click="$ctrl.add(list);"></i>
+            </section>
+        </section>
+        <section class="expandable">
+            <section class="content-container">
+                <p>Diet: {{list.recipe.dietLabels[0]}}</p>
+                <p>Servings: {{list.recipe.yield}}</p>
+                <a id="results-link" href="{{list.recipe.url}}" target="_blank">Link to recipe</a>
+                <p>Ingredients:</p>
+                <ul ng-repeat="ingredient in list.recipe.ingredientLines track by $index">
+                    <li>{{ingredient}}</li>
+                </ul>
+            </section>
+            <section class="image-container">
+                <img id="recipe-image" src="{{list.recipe.image}}">
+            </section>
+
+        </section>
+    </section>
+</section>
